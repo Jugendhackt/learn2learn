@@ -1,84 +1,33 @@
 import 'package:flutter/material.dart';
 
-
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return DefaultTabController(
-        length: 3,
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text("learn2learn", style: TextStyle(fontSize: 24),),
-            actions: [
-                IconButton(
-                  icon: const Icon(Icons.account_circle),
-                  iconSize: 37,
-                  onPressed: () {},
-                ),
-                // child: Icon(Icons.account_circle),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: IconButton(
-                  icon: const Icon(Icons.menu),
-                  iconSize: 37,
-                  onPressed: () {},
-                ),
-                // child: Icon(Icons.account_circle),
+    return (
+      Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF8800ff)
               ),
-            ],
-            bottom: const TabBar(
-              indicatorColor: Colors.white,
-              tabs: [
-                Tab(child: Text("Let's Start", style: TextStyle(fontSize: 18),)),
-                Tab(child: Text("Home", style: TextStyle(fontSize: 18),)),
-                Tab(child: Text("Learn It", style: TextStyle(fontSize: 18),)),
-              ],
-            ),
-          ),
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF8800ff)
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(12),
-                    child: Text(
-                      "START!",
-                      style: TextStyle(fontSize: 24),
-                    ),
-                  ),
-                  onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.all(12),
+                child: Text(
+                  "START!",
+                  style: TextStyle(fontSize: 24),
                 ),
-                const SizedBox(height: 50),
-                const Image(image: AssetImage("assets/alpaka.png"))
-              ],
+              ),
+              onPressed: () {},
             ),
-          )
-    ));
+            const SizedBox(height: 50),
+            const Image(image: AssetImage("assets/alpaka.png"))
+          ],
+        ),
+      )
+    );
   }
 }
