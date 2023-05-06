@@ -54,21 +54,21 @@ class _TabPageState extends State<TabPage> {
             bottom: const TabBar(
               indicatorColor: Colors.white,
               tabs: [
+                Tab(child: Text("Home", style: TextStyle(fontSize: 18),)),
                 Tab(
                   child: Text(
-                    "Let's Start",
+                    "Quiz",
                     style: TextStyle(fontSize: 18),
                   ),
                 ),
-                Tab(child: Text("Home", style: TextStyle(fontSize: 18),)),
                 Tab(child: Text("Learn It", style: TextStyle(fontSize: 18),)),
               ],
             ),
           ),
           body: const TabBarView(
               children: [
-                Text("1"),
                 HomePage(),
+                Text("1"),
                 LearnPage()
               ]
           ),
