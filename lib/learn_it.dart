@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:yaml/yaml.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:learn2learn/expansion_panel/my_expansion_panel_list.dart';
 
 
 class LearnPage extends StatefulWidget {
@@ -11,25 +12,58 @@ class LearnPage extends StatefulWidget {
   State<LearnPage> createState() => _LearnPageState();
 }
 
-class _LearnPageState extends State<LearnPage> {
 
+class LearnMethod {
+  const LearnMethod({
+    required this.name,
+    required this.description,
+  });
+
+  final String name;
+  final String description;
+}
+
+
+class _LearnPageState extends State<LearnPage> {
   Future<YamlMap> getFile() async {
     return loadYaml(await rootBundle.loadString("assets/bibliotek.yaml"));
   }
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getFile(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return Text(snapshot.data!.toString());
-          } else if (snapshot.hasError) {
-            return Text(snapshot.error.toString());
-          } else {
-            return const Text("Läd");
-          }
-        }
+    return Scaffold(
+      body: TabBarView(
+        children: [
+          const Text("a"),
+          const Text("b"),
+          SingleChildScrollView(
+            child: FutureBuilder(
+              future: entries(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return snapshot.data!;
+                } else if (snapshot.hasError) {
+                  return Text(snapshot.error.toString());
+                } else {
+                  return Text("Lade");
+                }
+              }
+            ),
+          ),
+        ],
+      ),
     );
+  }
+
+  Future<MyExpansionPanelList> entries() async {
+    YamlMap y_library = loadYaml(await rootBundle.loadString("assets/bibliotek.yaml"));
+    YamlList library = y_library["bibliotek"]["methoden"];
+    List<LearnMethod> methods = library.map((e) => LearnMethod(name: e["name"], description: e["beschreibung"])).toList();
+
+    MyExpansionPanelList panelList = MyExpansionPanelList(
+        children: methods.map((e) => MyExpansionPanel(title: e.name, body: Text(e.description))).toList()
+    );
+
+    return panelList;
   }
 }
