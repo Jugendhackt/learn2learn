@@ -1,4 +1,26 @@
 bibliotek:
   methoden:
-    - name: vokabelkarten
-      beschreibung: Schreibe die Vokabeln auf Karten
+    - name: Karteikarten
+      beschreibung: schreibe die zu lernnden Themen auf karteikarten
+    - name: Lesen und frei wiedergeben 
+      beschreibung: in Etappen aufteilen und eine Etappe so oft wiederholen, bis sie sitzt
+    - name: DIY-Vokabel-Memory
+      beschreibung: ein Memory mit dem Stoff, der zu lernen ist, anlegen
+    - name: Eselsbrücken
+      beschreibung: Kleine Merksätze und Eselsbrücken ausdenken
+    - name: Zusammenfassungen
+      beschreibung: texte, aufgaben nochmal zusammenfassen 
+    - name: Fachwörter sammeln
+      beschreibung: Schwierige Wörter nochmal mit Definition sammeln oder schreiben
+    - name: Lernposter
+      beschreibung: mit Mindmaps oder Diagrammen oder Tabellen, denn Stoff anschaulich gestalten
+    - name: Geplant lernen
+      beschreibung: Lernplan erstellen und Etappen weise immer ein bisschen lernen
+    - name: Bezug finden
+      beschreibung: das gelernte Wissen mit einem Gegenstand oder etwas anderem verbinden, um es sich besser zu merken
+    - name: Auf andere quellen zurückgreifen
+      beschreibung: nochmal bei nicht ganz verstandenen Themen in einem anderem buch nachschauen 
+    - name: Beispiele aus dem Alltag
+      beschreibung: wenn man ein Thema nicht ganz verstanden hat, dann vielleicht nach Beispielen im Alltag suchen
+    - name: Wissen spielerisch abfragen                   
+      beschreibung: ein quizz erstellen oder ein spiel, um den Stoff besser verstehen zu können
