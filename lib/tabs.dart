@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'home.dart';
+import 'package:learn2learn/expansion_panel/my_expansion_panel_list.dart';
 
 
 class TabPage extends StatefulWidget {
@@ -64,12 +63,33 @@ class _TabPageState extends State<TabPage> {
               ],
             ),
           ),
-          body: const TabBarView(
+          body: TabBarView(
               children: [
-                Text("1"),
-                HomePage(),
-                Text("3"),
-              ]
+                const Text('a'),
+                const Text('b'),
+                SingleChildScrollView(
+                  child: MyExpansionPanelList(
+                    children: [
+                      const MyExpansionPanel(
+                        title: 'Foo',
+                        body: Text('Fooooo'),
+                      ),
+                      MyExpansionPanel(
+                        title: 'Bar',
+                        body: Column(
+                          children: const [
+                            Text('Barrrrr'),
+                            Text('Barrrrr'),
+                            Text('Barrrrr'),
+                            Text('Barrrrr'),
+                            Text('Barrrrr'),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
           ),
     ));
   }
