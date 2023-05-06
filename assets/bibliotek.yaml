@@ -1,0 +1,4 @@
+bibliotek:
+  - methoden:
+      - name: vokabelkarten
+        beschreibung: Schreibe die Vokabeln auf Karten

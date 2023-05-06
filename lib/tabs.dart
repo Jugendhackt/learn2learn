@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home.dart';
+import 'learn_it.dart';
 
 
 class TabPage extends StatefulWidget {
@@ -68,7 +69,7 @@ class _TabPageState extends State<TabPage> {
               children: [
                 Text("1"),
                 HomePage(),
-                Text("3"),
+                LearnPage()
               ]
           ),
     ));
