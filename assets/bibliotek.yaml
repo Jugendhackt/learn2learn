@@ -10,6 +10,96 @@ bibliotek:
           typ: visuell
         - text: … wenn ich mir etwas über sie angehört habe
           typ: auditiv
+    - frage: du hast in den nächsten tagen einen Test, wie lernst du führ ihn
+      antworten:
+        - text: ich erstelle mir ein Schaubild
+          typ: visuell
+        - text: ich erkläre jemandem das Thema
+          typ: kommunikativ
+        - text: ich wende die Themen praktisch an 
+          typ: motorisch
+        - text: ich höre mir etwas zu dem Thema an
+          typ: auditiv
+    - frage: mir helfen Zeichnungen und Diagramme zum Lernen
+      antworten: 
+        - text: trifft zu
+          typ: visuell
+        - text: trifft nicht zu
+          typ: ungültig
+        - text: Trift teilweise zu 
+          typ: visuell
+        - text: Trifft teilweise nicht zu
+          typ: ungültig
+    - frage: mir hilft es mich über das Thema zu unterhalten
+      antworten: 
+        - text: trifft zu
+          typ: kommunikativ
+        - text: trifft nicht zu
+          typ: ungültig
+        - text: Trift teilweise zu 
+          typ: kommunikativ
+        - text: Trifft teilweise nicht zu
+          typ: ungültig
+    - frage: mir hilft es dinge praktisch anzuwenden 
+      antworten: 
+        - text: trifft zu
+          typ: motorisch
+        - text: trifft nicht zu
+          typ: ungültig
+        - text: Trift teilweise zu 
+          typ: motorisch
+        - text: Trifft teilweise nicht zu
+          typ: ungültig
+    - frage: mir hilft es Lerninhalte anzuhören    
+      antworten: 
+        - text: trifft zu
+          typ: auditiv
+        - text: trifft nicht zu
+          typ: ungültig
+        - text: Trift teilweise zu 
+          typ: auditiv
+        - text: Trifft teilweise nicht zu
+          typ: ungültig
+    - frage: ich kann mir Vokabeln besser merken, wenn ich sie höre
+      antworten: 
+        - text: trifft zu
+          typ: auditiv
+        - text: trifft nicht zu
+          typ: ungültig
+        - text: Trift teilweise zu 
+          typ: auditiv
+        - text: Trifft teilweise nicht zu
+          typ: ungültig
+    - frage: ich kann mir Vokabeln besser merken, wenn ich sie benutze
+      antworten: 
+        - text: trifft zu
+          typ: kommunikativ
+        - text: trifft nicht zu
+          typ: ungültig
+        - text: Trift teilweise zu 
+          typ: kommunikativ
+        - text: Trifft teilweise nicht zu
+          typ: ungültig
+    - frage: ich kann mir Vokabeln besser merken, wenn ich sie mir sie anschaue/durchlese
+      antworten: 
+        - text: trifft zu
+          typ: visuell
+        - text: trifft nicht zu
+          typ: ungültig
+        - text: Trift teilweise zu 
+          typ: visuell
+        - text: Trifft teilweise nicht zu
+          typ: ungültig
+    - frage: Rechtschreibung Felt mir leichter, wenn ich viel schriebe
+      antworten: 
+        - text: trifft zu
+          typ: motorisch
+        - text: trifft nicht zu
+          typ: ungültig
+        - text: Trift teilweise zu 
+          typ: motorisch
+        - text: Trifft teilweise nicht zu
+          typ: ungültig
 
   methoden:
     - name: Karteikarten
