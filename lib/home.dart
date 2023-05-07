@@ -28,7 +28,9 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(fontSize: 24),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                DefaultTabController.of(context).animateTo(1);
+              },
             ),
             const SizedBox(height: 50),
             GestureDetector(
