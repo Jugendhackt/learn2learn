@@ -1,16 +1,4 @@
 # learn2learn
 
-learn2learn
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+L2L ist eine App die einen das Lernen durch spielereinen wieder beibringt.
+Durch das vorhandene Quizz siehst du welcher Lerntyp du bist und welche Lerntechnik dir im Alltag helfen kann.
