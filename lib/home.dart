@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-const alpakaimages =["alpaka.png","zwinkerndes_Alpaka.png"];
+const alpakaimages =["alpaka.png","zwinkerndes_Alpaka.png","rotes_alpaka.png","zwinkerndes_rotes_alpaka.png","lilanes_alpaka.png","zwinkerndes_lilanes_alpaka.png"];
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                 setState(() {});
               },
               child: AnimatedSwitcher(
-                duration: const Duration(milliseconds: 50),
+                duration: const Duration(milliseconds: 100),
                   child: Image(
               key: UniqueKey(),
                       image: AssetImage("assets/${alpakaimages[image_index%alpakaimages.length]}"))),
