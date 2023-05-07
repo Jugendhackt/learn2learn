@@ -25,10 +25,6 @@ class LearnMethod {
 
 
 class _LearnPageState extends State<LearnPage> {
-  Future<YamlMap> getFile() async {
-    return loadYaml(await rootBundle.loadString("assets/bibliotek.yaml"));
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +41,7 @@ class _LearnPageState extends State<LearnPage> {
                 } else if (snapshot.hasError) {
                   return Text(snapshot.error.toString());
                 } else {
-                  return Text("Lade");
+                  return const Text("Lade");
                 }
               }
             ),
