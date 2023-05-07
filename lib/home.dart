@@ -32,11 +32,12 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(height: 50),
             GestureDetector(
-              onTap:(){
+              onTap:()async{
                 image_index++;
-                setState(() {
-
-                });
+                setState(() {});
+                await Future.delayed(const Duration(milliseconds: 100),);
+                image_index++;
+                setState(() {});
               },
               child: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 50),
