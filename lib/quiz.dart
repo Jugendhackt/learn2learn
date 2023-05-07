@@ -20,7 +20,7 @@ class _QuizPageState extends State<QuizPage> {
     "auditiv": 0
   };
 
-  String getLearnType() {
+  Widget getLearnType() {
     List<String> highest = [];
     int max = 0;
     stats.forEach((key, value) {
@@ -33,7 +33,42 @@ class _QuizPageState extends State<QuizPage> {
       }
     });
 
-    return highest.join("\n");
+    List<Widget> types_output = [
+      Text(
+        "Dein Lerntyp(en) ist: ",
+        style: Theme.of(context).textTheme.headlineLarge,
+      ),
+    ];
+
+    for (String type in highest) {
+      String text = "";
+
+      if (type == "motorisch") {
+        text = "Du bist ein Motorischer-Lerntyp, das heißt du kannst dir  Dinge am besten merken, wenn du sie über Handlungen selbst nachvollzogen hat.";
+      }
+      if (type == "kommunikativ") {
+        text = "Du bist ein Kommunikativer-Lerntyp, das heißt wenn du Informationen mit anderen diskutieren, durchsprechen und jederzeit Fragen stellst, lernst du am besten.";
+      }
+      if (type == "visuell") {
+        text = "Du bist ein Visueller-Lerntyp, das heißt du kannst Handlungsabläufe besser nachvollziehen und verarbeiten, wenn sie visuell dargestellt sind.";
+      }
+      if (type == "auditiv") {
+        text = "Du bist ein Auditiver-Lerntyp, das heißt du kannst besonders gut gehörte Informationen aufnehmen, sie behalten und wiedergeben. Dadurch sollte es besonders leicht sein zu verstehen, was der Lehrer erklärt.";
+      }
+
+      types_output.add(
+          Text(type, style: Theme.of(context).textTheme.headlineMedium,)
+      );
+
+      types_output.add(
+          Text(text)
+      );
+    }
+
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: types_output,
+    );
   }
 
   @override
@@ -57,19 +92,7 @@ class _QuizPageState extends State<QuizPage> {
   Future<Widget> question() async {
     YamlMap library = loadYaml(await rootBundle.loadString("assets/bibliotek.yaml"));
     if (step > library["bibliotek"]["quiz"].length - 1) {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-              "Dein Lerntyp ist: ",
-              style: Theme.of(context).textTheme.headlineLarge,
-          ),
-          Text(
-            getLearnType(),
-          style: Theme.of(context).textTheme.headlineMedium,
-    )
-        ],
-      );
+      return getLearnType();
     } else {
       YamlMap question = library["bibliotek"]["quiz"][step];
       String frage = question["frage"];
@@ -105,7 +128,6 @@ class _QuizPageState extends State<QuizPage> {
         setState(() {
           step++;
         });
-        print(stats);
       },
       style: OutlinedButton.styleFrom(
           side: const BorderSide(color: Colors.purple, width: 2)
