@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 import 'learn_it.dart';
 import 'quiz.dart';
+import 'settings.dart';
 
 
 class TabPage extends StatefulWidget {
@@ -45,9 +46,16 @@ class _TabPageState extends State<TabPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: IconButton(
-                  icon: const Icon(Icons.menu),
+                  icon: const Icon(Icons.settings),
                   iconSize: 37,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SettingsPage()
+                        )
+                    );
+                  },
                 ),
                 // child: Icon(Icons.account_circle),
               ),
@@ -70,7 +78,7 @@ class _TabPageState extends State<TabPage> {
               children: [
                 HomePage(),
                 QuizPage(),
-                LearnPage()
+                LearnPage(),
               ]
           ),
     ));
