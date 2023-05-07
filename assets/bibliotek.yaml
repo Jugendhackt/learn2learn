@@ -1,4 +1,16 @@
 bibliotek:
+  quiz:
+    - frage: Ich kann mich am besten an Methoden für etwas erinnern, wenn ich
+      antworten:
+        - text: … mit ihnen gearbeitet habe
+          typ: motorisch
+        - text: … über sie geredet habe
+          typ: kommunikativ
+        - text: … wenn ich sie gesehen habe
+          typ: visuell
+        - text: … wenn ich mir etwas über sie angehört habe
+          typ: auditiv
+
   methoden:
     - name: Karteikarten
       beschreibung: schreibe die zu lernnden Themen auf karteikarten
