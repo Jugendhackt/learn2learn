@@ -1,8 +1,15 @@
-import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+import 'package:flutter/material.dart';
+const alpakaimages =["alpaka.png","zwinkerndes_Alpaka.png"];
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int image_index=0;
   @override
   Widget build(BuildContext context) {
     return (
@@ -24,7 +31,19 @@ class HomePage extends StatelessWidget {
               onPressed: () {},
             ),
             const SizedBox(height: 50),
-            const Image(image: AssetImage("assets/alpaka.png"))
+            GestureDetector(
+              onTap:(){
+                image_index++;
+                setState(() {
+
+                });
+              },
+              child: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 50),
+                  child: Image(
+              key: UniqueKey(),
+                      image: AssetImage("assets/${alpakaimages[image_index%alpakaimages.length]}"))),
+            )
           ],
         ),
       )
